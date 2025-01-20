@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1E293B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #8B8B8B;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    box-sizing: border-box;
+}
+.header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.profile-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.info-item {
+    background-color: #FFE600;
+    padding: 15px;
+    border-radius: 5px;
+    color: #1E293B;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+.info-item:nth-child(odd) {
+    background-color: #0053D6;
+    color: white;
+}
+.info-item::before {
+    content: attr(data-label);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: inherit;
+}
+.info-item[data-label] {
+    padding-top: 35px;
+}
+.actions {
+    display: flex;
+    justify-content: flex-end;
+}
+.actions button {
+    background-color: #FFE600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #CCCCCC;
+}
